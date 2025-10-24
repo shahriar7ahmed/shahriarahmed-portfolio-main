@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "cv": "CV",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Shahriar",
+    "subtitle": "Front-End Developer",
+    "greeting": "👋 Page 1 — Welcome",
+    "scrollPrompt": "Flip down to the next panel 👇",
+    "ctaProjects": "View Projects",
+    "ctaCV": "Download CV",
+    "ctaContact": "Contact Me"
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "私について",
+    "heading": "About me",
+    "role": "Front-End Developer",
+    "roleJP": "フロントエンド開発者",
+    "abilitiesTitle": "Abilities",
+    "intro": "Passionate front-end developer crafting beautiful, performant web experiences with modern technologies. I specialize in React, TypeScript, and creating pixel-perfect UIs that users love.",
+    "timeline": {
+      "chapter1": "Chapter 1: Beginnings",
+      "chapter1Desc": "Started my journey in web development, learning HTML, CSS, and JavaScript fundamentals.",
+      "chapter2": "Chapter 2: React Era",
+      "chapter2Desc": "Mastered React and modern frontend frameworks, building interactive applications.",
+      "chapter3": "Chapter 3: Professional Growth",
+      "chapter3Desc": "Contributed to production applications, mentored juniors, and refined my craft."
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "プロジェクト",
+    "filterAll": "All",
+    "filterWeb": "Web Apps",
+    "filterUI": "UI Experiments",
+    "filterOpen": "Open Source",
+    "viewDetails": "View Details",
+    "closeModal": "Turn page back ↩︎",
+    "techStack": "Tech Stack",
+    "liveDemo": "Live Demo",
+    "sourceCode": "Source Code"
+  },
+  "cv": {
+    "title": "CV / Resume",
+    "subtitle": "履歴書",
+    "download": "Download",
+    "preview": "Preview",
+    "selectLanguage": "Select Language"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "連絡",
+    "heading": "Get in Touch",
+    "intro": "Let's create something amazing together! Drop me a message and I'll get back to you soon.",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "sending": "Sending..."
+    },
+    "success": "Message delivered! ✉️",
+    "error": "Failed to send message. Please try again.",
+    "emailLabel": "Email:",
+    "socialLabel": "Find me on:"
+  },
+  "footer": {
+    "madeWith": "Made with",
+    "and": "and",
+    "manga": "manga vibes 🎴"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "about": "紹介",
+    "projects": "プロジェクト",
+    "cv": "履歴書",
+    "contact": "連絡"
+  },
+  "hero": {
+    "title": "シャフリアール",
+    "subtitle": "フロントエンド開発者",
+    "greeting": "👋 第1ページ — ようこそ",
+    "scrollPrompt": "次のパネルにスクロールしてね 👇",
+    "ctaProjects": "プロジェクトを見る",
+    "ctaCV": "履歴書をダウンロード",
+    "ctaContact": "連絡する"
+  },
+  "about": {
+    "title": "紹介",
+    "subtitle": "About",
+    "heading": "私について",
+    "role": "フロントエンド開発者",
+    "roleJP": "Front-End Developer",
+    "abilitiesTitle": "技術",
+    "intro": "美しく、パフォーマンスの高いWebエクスペリエンスを作成することに情熱を注ぐフロントエンド開発者。React、TypeScript、そしてユーザーが愛するピクセルパーフェクトなUIの作成を専門としています。",
+    "timeline": {
+      "chapter1": "第1章：始まり",
+      "chapter1Desc": "Web開発の旅を始め、HTML、CSS、JavaScriptの基礎を学びました。",
+      "chapter2": "第2章：React時代",
+      "chapter2Desc": "Reactと最新のフロントエンドフレームワークを習得し、インタラクティブなアプリケーションを構築しました。",
+      "chapter3": "第3章：プロフェッショナルな成長",
+      "chapter3Desc": "本番アプリケーションに貢献し、ジュニアをメンターし、技術を磨きました。"
+    }
+  },
+  "projects": {
+    "title": "プロジェクト",
+    "subtitle": "Projects",
+    "filterAll": "すべて",
+    "filterWeb": "Webアプリ",
+    "filterUI": "UI実験",
+    "filterOpen": "オープンソース",
+    "viewDetails": "詳細を見る",
+    "closeModal": "ページを戻す ↩︎",
+    "techStack": "技術スタック",
+    "liveDemo": "ライブデモ",
+    "sourceCode": "ソースコード"
+  },
+  "cv": {
+    "title": "履歴書 / CV",
+    "subtitle": "Resume",
+    "download": "ダウンロード",
+    "preview": "プレビュー",
+    "selectLanguage": "言語を選択"
+  },
+  "contact": {
+    "title": "連絡",
+    "subtitle": "Contact",
+    "heading": "お問い合わせ",
+    "intro": "一緒に素晴らしいものを作りましょう！メッセージをお送りください。すぐに返信いたします。",
+    "form": {
+      "name": "お名前",
+      "email": "メールアドレス",
+      "message": "メッセージ",
+      "submit": "送信",
+      "sending": "送信中..."
+    },
+    "success": "メッセージを送信しました！✉️",
+    "error": "メッセージの送信に失敗しました。もう一度お試しください。",
+    "emailLabel": "メール：",
+    "socialLabel": "SNS："
+  },
+  "footer": {
+    "madeWith": "Made with",
+    "and": "and",
+    "manga": "漫画の雰囲気 🎴"
+  }
+}
