@@ -6,6 +6,8 @@ import { skills } from '@/data/projects';
 import { Sparkles } from 'lucide-react';
 
 const VIEWPORT = { once: true };
+const SHARED_IN_VIEW = { initial: 'hidden', whileInView: 'visible', viewport: VIEWPORT } as const;
+const TIMELINE_SEGMENTS = [1, 2, 3] as const;
 
 const fadeUp: Variants = {
   hidden: { opacity: 0, y: 20 },
@@ -28,17 +30,15 @@ const slideInLeft: Variants = {
 };
 
 const AboutSection: React.FC = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
-  // Batch translations to avoid repeated t() calls on each render/map
   const content = useMemo(() => {
-    const timeline = Array.from({ length: 3 }, (_, i) => {
-      const id = i + 1;
-      return {
-        title: t(`about.timeline.chapter${id}`),
-        desc: t(`about.timeline.chapter${id}Desc`),
-      };
-    });
+    const timeline = TIMELINE_SEGMENTS.map((id, index) => ({
+      id,
+      title: t(`about.timeline.chapter${id}`),
+      desc: t(`about.timeline.chapter${id}Desc`),
+      delay: (index + 1) * 0.05,
+    }));
 
     return {
       title: t('about.title'),
@@ -50,20 +50,14 @@ const AboutSection: React.FC = () => {
       abilitiesTitle: t('about.abilitiesTitle'),
       timeline,
     };
-  }, [t]);
+  }, [i18n.language, t]);
 
   return (
     <section id="about" className="relative py-20 bg-secondary/30">
       <div className="absolute inset-0 screen-tone" />
 
       <div className="relative container mx-auto px-4">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={VIEWPORT}
-          variants={fadeUp}
-          className="text-center mb-16"
-        >
+        <motion.div {...SHARED_IN_VIEW} variants={fadeUp} className="text-center mb-16">
           <div className="inline-block mb-4">
             <div className="flex items-center gap-3 px-6 py-3 bg-card border-4 border-primary rounded-sm shadow-panel">
               <Sparkles className="w-6 h-6" />
@@ -95,13 +89,7 @@ const AboutSection: React.FC = () => {
               {content.abilitiesTitle}
             </h3>
 
-            <motion.div
-              className="flex flex-wrap gap-2"
-              initial="hidden"
-              whileInView="visible"
-              viewport={VIEWPORT}
-              variants={containerStagger}
-            >
+            <motion.div className="flex flex-wrap gap-2" {...SHARED_IN_VIEW} variants={containerStagger}>
               {skills.map((skill) => (
                 <motion.span key={skill} variants={tagVariant} className="tag-manga">
                   {skill}
@@ -111,24 +99,16 @@ const AboutSection: React.FC = () => {
           </PanelFrame>
         </div>
 
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={VIEWPORT}
-          variants={fadeUp}
-          className="mt-12 max-w-4xl mx-auto"
-        >
+        <motion.div {...SHARED_IN_VIEW} variants={fadeUp} className="mt-12 max-w-4xl mx-auto">
           <PanelFrame>
             <h3 className="text-2xl font-display mb-6 text-center">Journey Timeline 📖</h3>
             <div className="space-y-6">
-              {content.timeline.map((item, idx) => (
+              {content.timeline.map((item) => (
                 <motion.div
-                  key={idx}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={VIEWPORT}
+                  key={item.id}
+                  {...SHARED_IN_VIEW}
                   variants={slideInLeft}
-                  transition={{ delay: (idx + 1) * 0.05 }}
+                  transition={{ delay: item.delay }}
                   className="border-l-4 border-primary pl-6 py-2"
                 >
                   <h4 className="text-xl font-display mb-2">{item.title}</h4>

@@ -218,7 +218,7 @@ const ContactSection = () => {
                 <SocialLink href="https://www.linkedin.com/in/shahriar-ahmed-405261347/" label="LinkedIn">
                   <Linkedin className="w-6 h-6" />
                 </SocialLink>
-                <SocialLink href="mailto:shahriar@example.com" label="Email">
+                <SocialLink href="mailto:ahmedshahriar948@gmail.com" label="Email">
                   <Mail className="w-6 h-6" />
                 </SocialLink>
               </div>
